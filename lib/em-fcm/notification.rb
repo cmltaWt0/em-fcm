@@ -6,7 +6,9 @@ module EventMachine
       attr_reader :uuid, :options, :registration_ids
 
       # items that can occur in the options
-      VALID_TOP_LEVEL_ITEMS = [:time_to_live, :delay_while_idle, :collapse_key, :data].freeze
+      VALID_TOP_LEVEL_ITEMS = [
+        :time_to_live, :delay_while_idle, :collapse_key, :data, :type, :notification, :target_id, :token_platform
+      ].freeze
 
       USER_AGENT = "em-fcm #{EM::FCM::VERSION}"
 
